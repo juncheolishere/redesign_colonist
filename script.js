@@ -72,15 +72,12 @@ const nextBtn = (obj) => {
     {
         moving.style.transform = "translateX("+(posX-unitWidth)+"px)";
     }
-    
 }
-
 
 
 // init controller
 let controller = new ScrollMagic.Controller();
 const trigger1 = document.getElementById("trigger1");
-
 const tHeight = parseInt(getComputedStyle(trigger1).height.split("p")[0]);
 console.log(tHeight)
 
@@ -88,7 +85,6 @@ console.log(tHeight)
 // build scene
 let scene = new ScrollMagic.Scene({triggerElement: trigger1, duration: tHeight+"px"})
                 .addTo(controller)
-                .addIndicators() // add indicators (requires plugin)
                 .on("progress", function (e) {
                     const main1 = document.getElementById("main1");
                     const main2 = document.getElementById("main2");
